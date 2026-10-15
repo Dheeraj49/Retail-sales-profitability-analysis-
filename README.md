@@ -2,7 +2,7 @@
 
 **Tools:** MySQL, SQL, Power BI, DAX
 
-![Dashboard](images/dashboard.png)
+![Dashboard](4_IMAGE/dashboard.png)
 
 ## Business problem
 
@@ -71,19 +71,19 @@ Lines discounted above 20% (14% of all lines) lost $135K combined. Lines at 20% 
 ## Repository structure
 
 ```
-data/        Sample - Superstore.csv
-sql/         01_setup.sql, 02_cleaning.sql, 03_analysis.sql, 04_discounts.sql, 05_trends.sql
-dashboard/   retail_sales_profitability.pbix
-images/      dashboard screenshots
+1_DATA/        Sample - Superstore.csv (raw), superstore_clean.csv (cleaned export)
+2_SQL/         01_setup.sql, 02_cleaning.sql, 03_analysis.sql, 04_discounts.sql, 05_trends.sql
+3_DASHBOARD/   retail_sales_profitability_analysis.pbix
+4_IMAGE/       dashboard screenshot
 ```
 
 ## How to reproduce
 
-1. Create the database and table with `sql/01_setup.sql` and load the CSV.
-2. Run `sql/02_cleaning.sql` to build `superstore_clean`.
-3. Run the analysis scripts in `sql/` in order.
-4. Open the `.pbix` file in Power BI Desktop (or load the cleaned table exported as CSV).
+1. Run `2_SQL/01_setup.sql` to create the database and raw table. Copy `Sample - Superstore.csv` into MySQL's `secure_file_priv` folder first, and edit the file path in the `LOAD DATA` line if yours differs.
+2. Run `2_SQL/02_cleaning.sql` to build `superstore_clean`.
+3. Run the analysis scripts in `2_SQL/` in order.
+4. Open `3_DASHBOARD/retail_sales_profitability_analysis.pbix` in Power BI Desktop.
 
 ## Author
 
-[Your name] | [LinkedIn URL] | [Email]
+Dheeraj | [GitHub](https://github.com/Dheeraj49)
